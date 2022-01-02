@@ -11,6 +11,8 @@
             rel="stylesheet"
         />
         <link rel="stylesheet" href="/style/styles.css" />
+        <link rel="stylesheet" href="/style/overlays.css" />
+        <link rel="stylesheet" href="/style/configuration.css" />
         <title>Ticz-Tacz-Toez</title>
     </head>
     <body>
@@ -19,10 +21,11 @@
             <p>Built with HTML, CSS and Vanilla Javascript</p>
         </header>
         <main>
-            <aside>
+            <div id="backdrop"></div>
+            <aside class="modal" id="config-overlay">
                 <h2>Choose Your Name</h2>
                 <form action="">
-                    <div>
+                    <div class="form-control">
                         <label for="player-name">Player Name</label>
                         <input type="text" name="username" id="player-name" />
                     </div>
