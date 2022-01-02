@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    font-family: "Open-Sans", sans-serif;
+    color: rgb(36, 32, 32);
+    --primary-blue-color: rgb(57, 77, 252);
+    --secondary-blue-color: rgb(54, 19, 211);
+    --primary-white-color: rgb(245, 245, 245);
+    --secondary-white-color: rgb(204, 213, 255);
+}
+
+#main-header {
+    background-color: var(--primary-blue-color);
+    color: var(--primary-white-color);
+    padding: 2rem 5%;
+    text-align: center;
+}
+
+.btn {
+    font: inherit;
+    padding: 0.5rem 1.5rem;
+    background-color: var(--primary-blue-color);
+    border: 1px solid var(--primary-blue-color);
+    color: var(--primary-white-color);
+    border-radius: 4px;
+    cursor: pointer;
+}
+.btn-alt {
+    background-color: transparent;
+    border-color: transparent;
+    color: var(--primary-blue-color);
+}
+
+.btn:hover {
+    background-color: var(--secondary-blue-color);
+    border-color: var(--secondary-blue-color);
+}
+.btn-alt:hover {
+    background-color: var(--secondary-white-color);
+}
