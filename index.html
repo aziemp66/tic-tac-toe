@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="/style/styles.css" />
         <link rel="stylesheet" href="/style/overlays.css" />
         <link rel="stylesheet" href="/style/configuration.css" />
+        <link rel="stylesheet" href="/style/game.css" />
         <title>Ticz-Tacz-Toez</title>
     </head>
     <body>
@@ -57,7 +58,7 @@
                 <button class="btn">Start New Game</button>
             </section>
             <section id="active-game">
-                <article>
+                <article id="game-over">
                     <h3>You Won, <span id="winner-name">PLAYER NAME</span>!</h3>
                     <p>Click "Start New Game" above, to start a new game!</p>
                 </article>
@@ -65,18 +66,18 @@
                     It's Your Turn
                     <span id="active-player-name">Player Name</span>!!!
                 </p>
-                <ol>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-
-                    <li></li>
+                <ol id="game-board">
+                    <li class="disabled">X</li>
                     <li></li>
                     <li></li>
 
                     <li></li>
+                    <li class="disabled">X</li>
                     <li></li>
+
+                    <li class="disabled">O</li>
                     <li></li>
+                    <li class="disabled">O</li>
                 </ol>
             </section>
         </main>
