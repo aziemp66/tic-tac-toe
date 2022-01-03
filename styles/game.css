@@ -16,7 +16,7 @@
     display: none;
 }
 
-#game-over h2 {
+#game-over h3 {
     font-size: 2.5rem;
     margin: 0.5rem 0;
 }
