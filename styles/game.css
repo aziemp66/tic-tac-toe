@@ -5,8 +5,8 @@
 }
 
 #game-over {
-    width: 90%;
-    max-width: 40rem;
+    width: 80%;
+    max-width: 35rem;
     margin: auto;
     padding: 1rem 2rem;
     background-color: var(--secondary-blue-color);
