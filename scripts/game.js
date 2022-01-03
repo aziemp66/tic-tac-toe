@@ -34,7 +34,55 @@ function selectGameField(event) {
     selectedField.classList.add("disabled");
 
     gameData[selectedRow][selectedColumn] = activePlayer + 1;
-    console.log(gameData);
 
+    const winnerId = checkForGameOver();
+    console.log(winnerId);
+
+    currentRound++;
     switchPlayer();
+}
+
+function checkForGameOver() {
+    //Checking Rows
+    for (let index = 0; index < 3; index++) {
+        if (
+            gameData[index][0] > 0 &&
+            gameData[index][0] === gameData[index][1] &&
+            gameData[index][1] === gameData[index][2]
+        ) {
+            return gameData[index][0];
+        }
+    }
+    //Checking Collumns
+    for (let index = 0; index < 3; index++) {
+        if (
+            gameData[0][index] > 0 &&
+            gameData[0][index] === gameData[1][index] &&
+            gameData[1][index] === gameData[2][index]
+        ) {
+            return gameData[0][index];
+        }
+    }
+    //Check Diagonal : Top Left to Bottom Right
+    if (
+        gameData[0][0] > 0 &&
+        gameData[0][0] === gameData[1][1] &&
+        gameData[1][1] === gameData[2][2]
+    ) {
+        return gameData[0][0];
+    }
+    //CHeck Diagonal : Bottom left to Top Right
+    if (
+        gameData[2][0] > 0 &&
+        gameData[2][0] === gameData[1][1] &&
+        gameData[1][1] === gameData[0][2]
+    ) {
+        return gameData[2][0];
+    }
+
+    if (currentRound === 9) {
+        return -1; //Draw
+    }
+
+    return 0; //Continue Round
 }
