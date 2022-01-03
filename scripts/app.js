@@ -16,10 +16,12 @@ const backdropElement = document.getElementById("backdrop");
 const formElement = document.getElementById("player-form");
 const formInputElement = document.getElementById("player-name");
 const errorOutput = document.getElementById("config-error");
+const gameArea = document.getElementById("active-game");
 
 const editPlayer1Button = document.getElementById("edit-player-1");
 const editPlayer2Button = document.getElementById("edit-player-2");
 const cancelConfigButton = document.getElementById("cancel-config-button");
+const startNewGameButton = document.getElementById("start-game-button");
 
 editPlayer1Button.addEventListener("click", openPlayerConfig);
 editPlayer2Button.addEventListener("click", openPlayerConfig);
@@ -28,3 +30,5 @@ cancelConfigButton.addEventListener("click", closePlayerConfig);
 backdropElement.addEventListener("click", closePlayerConfig);
 
 formElement.addEventListener("submit", savePlayerConfig);
+
+startNewGameButton.addEventListener("click", startNewGame);
