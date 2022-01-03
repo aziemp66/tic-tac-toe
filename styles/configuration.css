@@ -77,4 +77,7 @@
     #game-configuration h2 {
         padding-bottom: 0.5rem;
     }
+    #config-overlay {
+        width: 100%;
+    }
 }
